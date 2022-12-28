@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="ISO-8859-1">
+<title>Bootstrap Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="CSS/bootstrap.min.css">
+<script src="jQuery/jquery.slim.min.js"></script>
+<script src="jQuery/popper.min.js"></script>
+<script src="jQuery/bootstrap.bundle.min.js"></script>
+<script>
+	$(document).ready(function()
+		{
+			$("#myBtn").click(function(){
+				$("#myAlert").click("close");
+			});		
+		});
+</script>
+</head>
+<body>
+	<div class="m-4">
+		<div id="myAlert" class="alert alert-info alert-dismissible fade show">
+			<strong>Note!</strong> This is a simple example of dismissible alert.
+			<button type="button" class="close" id="myBtn"><span aria-hidden="true">&times;</span></button>
+		</div>
+	</div><br><br>
+	
+	<div class="alert alert-success">
+		<strong>Success! </strong>Alert Message
+	</div>
+	
+	<div class="alert alert-info">
+		<strong>Info! </strong>Alert Message
+	</div>
+	
+	<div class="alert alert-warning">
+		<strong>Warning! </strong>Alert Message 
+	</div>
+	
+	<div class="alert alert-primary">
+		<strong>Primary! </strong>Alert Message
+	</div>
+	
+	<div class="alert alert-secondary">
+		<strong>Secondary! </strong>Alert Message
+	</div>
+	
+	<div class="alert alert-dark">
+		<strong>Dark! </strong>Alert Message
+	</div>
+	
+	<div class="alert alert-light">
+		<strong>Light! </strong>Alert Message
+	</div><br><br>
+	
+	<div class="m-4">
+		<div class="alert alert-info alert-dismissible fade show">
+			<strong>Note! </strong> This is a simple example of dismissible alert.
+			<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
+		</div>
+	</div><br><br>
+	
+	<div class="alert alert-danger alert-dismissible fade show">
+		<h4 class="alert-heading"><i class="bi-exclamation-octagon-fill"></i> Oops! Something went wrong.</h4>
+		<p>Please enter a valid value in all the required fields before proceeding. If you ned any help just place the mouse pointer above info icon. </p>
+		<hr>
+		<p class="mb-0">Once you have filled all the details, click on the 'Next' button to continue</p>
+		<button type="button" class="close" data-dismiss="alert" aria-label="close">X</button>
+	</div><br><br>
+	
+	<!-- Success Alert -->
+	<div class="alert alert-success fade show">
+		<i class="bi-check-circle-fill"></i>
+		<strong class="mx-2">Success!</strong> Your Message has been sent successfully.
+		<button type="button" class="close" data-dismiss="alert">X</button>
+	</div>
+	<!-- Error Alert -->
+	<div class="alert alert-danger fade show">
+		<i class="bi-exclamation-octagon-fill"></i>
+		<strong class="mx-2">Error! </strong> A problem has been occurred while submitting your data.
+		<button type="button" class="close" data-dismiss="alert">x</button>
+	</div>
+		<!-- Warning Alert -->
+	<div class="alert alert-warning fade show">
+		<i class="bi-exclamation-octagon-fill"></i>
+		<strong class="mx-2">Warning! </strong> There was a problem with your network connection.
+		<button type="button" class="close" data-dismiss="alert">x</button>
+	</div>
+	<!-- Info Alert -->
+	<div class="alert alert-info fade show">
+		<i class="bi-info-circle-fill"></i>
+		<strong class="mx-2">Info! </strong> Please read the comments carefully.
+		<button type="alert" class="close" data-dismiss="alert">x</button>		
+	</div><br><br>
+	
+	
+</body>
+</html>
