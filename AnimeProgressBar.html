@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap Progress Bar</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="CSS/bootstrap.min.css">
+	<script src="jQuery/jquery.slim.min.js"></script>
+	<script src="jQuery/popper.slim.min.js"></script>
+	<script src="jQuery/bootstrap.bundle.min.js"></script>
+	<script src="jQuery/jquery.min.js"></script>
+	<style>
+		.progress{margin:10px;}
+		.progress-bar{height:18px;background-color:#2196F3;
+		border-radius:30px;position:relative;width:0;transition:5s linear;}
+	</style>
+	<script>
+		$(function(){
+			$("button").click(function(){
+				$(".progress-bar").each(function(){
+					var $this=$(this);
+					var percent=$this.attr('percent');
+					$this.css("width",percent+'%');
+					$({animatedValue:0}).animate({animateValue:percent},{duration:2000,
+						step:function(){
+							$this.attr('percent',Math.floor(this.animatedValue)+"%");
+						},
+						complete:function(){
+							$this.attr('percent',Math.floor(this.animatedValue)+'%');
+							$this.text($this.attr('percent'));
+						}	
+					});
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>
